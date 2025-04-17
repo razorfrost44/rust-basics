@@ -2,6 +2,8 @@ pub mod option_usage;
 use option_usage::*;
 pub mod result_usage;
 use result_usage::*;
+pub mod vector_usage;
+use vector_usage::*;
 
 pub fn run() {
     println!("START\n");
@@ -18,6 +20,11 @@ pub fn run() {
     let result_string = give_result_string("Banana".to_string());
     print_result_int(result_int);
     print_result_string(result_string);
+    println!("");
+
+    // Vector Usage
+    let vector = give_vector(10);
+    print_vector(vector);
     println!("");
 
     println!("\nEND");
