@@ -25,7 +25,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_option_int_unwrap() {
+    fn option_int_unwrap() {
         // Arrange
         let expected = 31;
         // Act
@@ -36,7 +36,7 @@ mod tests {
     }
 
     #[test]
-    fn test_option_int_match() {
+    fn option_int_match() {
         // Arrange
         let expected = 98;
         // Act
@@ -50,7 +50,7 @@ mod tests {
     }
 
     #[test]
-    fn test_option_string_unwrap() {
+    fn option_string_unwrap() {
         // Arrange
         let expected = String::from("Apple");
         // Act
@@ -61,7 +61,7 @@ mod tests {
     }
 
     #[test]
-    fn test_option_string_match() {
+    fn option_string_match() {
         // Arrange
         let expected = String::from("Banana");
         // Act
