@@ -34,6 +34,7 @@ pub fn run() {
     let random_number_range = get_random_i32_from_range(1, 100);
     let random_three = get_random_three_i32();
     let random_three_range = get_random_three_i32_from_range(1, 100);
+    let random_with_step = generate_random_with_step(0, 20, 5);
     println!("Random number: {}", random_number);
     println!("Random number from range 1-100: {}", random_number_range);
     println!(
@@ -44,6 +45,7 @@ pub fn run() {
         "Random three numbers from range 1-100: ({}, {}, {})",
         random_three_range.0, random_three_range.1, random_three_range.2
     );
+    println!("Random number with step 4: {}", random_with_step);
     println!();
 
     println!("\nEND");

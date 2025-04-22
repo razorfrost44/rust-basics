@@ -24,6 +24,13 @@ pub fn get_random_three_i32_from_range(min: i32, max: i32) -> (i32, i32, i32) {
     )
 }
 
+pub fn generate_random_with_step(min: i32, max: i32, step: i32) -> i32 {
+    let mut rng = rand::rng();
+    let total_steps = (max - min) / step + 1;
+    let random_index = rng.random_range(0..total_steps);
+    min + random_index * step
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
@@ -68,5 +75,19 @@ mod test {
         assert!(a >= min && a <= max);
         assert!(b >= min && b <= max);
         assert!(c >= min && c <= max);
+    }
+
+    #[test]
+    fn get_random_with_steps() {
+        // Arrange
+        let min = 0;
+        let max = 10;
+        let step = 2;
+        let possible = vec![0, 2, 4, 6, 8, 10];
+        // Act
+        let result = generate_random_with_step(min, max, step);
+        // Assert
+        assert!(result >= min && result <= max);
+        assert!(possible.contains(&result));
     }
 }
