@@ -32,8 +32,18 @@ pub fn run() {
     // Random Numbers Usage
     let random_number = get_random_i32();
     let random_number_range = get_random_i32_from_range(1, 100);
+    let random_three = get_random_three_i32();
+    let random_three_range = get_random_three_i32_from_range(1, 100);
     println!("Random number: {}", random_number);
     println!("Random number from range 1-100: {}", random_number_range);
+    println!(
+        "Random three numbers: ({}, {}, {})",
+        random_three.0, random_three.1, random_three.2
+    );
+    println!(
+        "Random three numbers from range 1-100: ({}, {}, {})",
+        random_three_range.0, random_three_range.1, random_three_range.2
+    );
     println!();
 
     println!("\nEND");
