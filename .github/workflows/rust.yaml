@@ -28,7 +28,7 @@ jobs:
       - name: Lint fmt
         run: cargo fmt --all -- --check
       - name: Lint clippy
-        run: cargo clippy -p rust-basics --no-deps -- -D warnings
+        run: cargo clippy -- -D warnings
 
   build-windows:
     needs: lint
