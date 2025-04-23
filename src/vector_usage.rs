@@ -15,7 +15,7 @@ pub fn print_vector(vector: Vec<i32>) {
         print!("{} ", num)
     }
 
-    println!("");
+    println!();
 }
 
 #[cfg(test)]
