@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: rust-basics
-          path: target/**/*.exe
+          path: target/**/rust-basics.exe
 
   test-windows:
     needs: build-windows
