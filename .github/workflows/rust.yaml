@@ -35,9 +35,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download Windows build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: rust-basics
       - name: Run tests
         run: cargo test --verbose
