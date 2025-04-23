@@ -39,6 +39,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: rust-basics
-          path: ./rust-basics/**/rust-basics.exe
+          path: ./rust-basics
       - name: Run tests
         run: cargo test --verbose
