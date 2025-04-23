@@ -8,7 +8,8 @@ pub mod random_numbers_usage;
 use random_numbers_usage::*;
 
 pub fn run() {
-    println!("START\n");
+    println!("START");
+    println!();
 
     // Option Usage
     let option_int = give_option_int(42);
@@ -46,7 +47,7 @@ pub fn run() {
         random_three_range.0, random_three_range.1, random_three_range.2
     );
     println!("Random number with step 4: {}", random_with_step);
-    println!();
 
-    println!("\nEND");
+    println!();
+    println!("END");
 }
