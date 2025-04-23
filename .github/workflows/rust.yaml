@@ -31,6 +31,7 @@ jobs:
           cargo clippy -- -D warnings
 
   build-windows:
+    needs: lint
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
