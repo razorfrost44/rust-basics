@@ -25,10 +25,10 @@ jobs:
             target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
-      - name: Lint
-        run: |
-          cargo fmt --all -- --check
-          cargo clippy -- -D warnings
+      - name: Lint fmt
+        run: cargo fmt --all -- --check
+      - name: Lint clippy
+        run: cargo clippy -- -D warnings
 
   build-windows:
     needs: lint
