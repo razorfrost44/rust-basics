@@ -6,6 +6,8 @@ pub mod vector_usage;
 use vector_usage::*;
 pub mod random_numbers_usage;
 use random_numbers_usage::*;
+pub mod union_type_usage;
+use union_type_usage::*;
 
 pub fn run() {
     println!("START");
@@ -47,6 +49,25 @@ pub fn run() {
         random_three_range.0, random_three_range.1, random_three_range.2
     );
     println!("Random number with step 4: {}", random_with_step);
+    println!();
+
+    // Union Type Usage
+    let my_union_int = MyUnionWrapper {
+        union_type: MyUnionType::Int,
+        union_value: MyUnion { int_value: 42 },
+    };
+    let my_union_float = MyUnionWrapper {
+        union_type: MyUnionType::Float,
+        union_value: MyUnion { float_value: 3.14 },
+    };
+    let my_union_u8 = MyUnionWrapper {
+        union_type: MyUnionType::U8,
+        union_value: MyUnion { u8_value: 255 },
+    };
+
+    println!("MyUnion: {}", my_union_int);
+    println!("MyUnion: {}", my_union_float);
+    println!("MyUnion: {}", my_union_u8);
 
     println!();
     println!("END");
